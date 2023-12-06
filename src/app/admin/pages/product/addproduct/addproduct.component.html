@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Ürün Ekle</h2>
+            <form [formGroup]="AddProductForm" (ngSubmit)="addProduct()" >
+                <div class="mb-3">
+
+                    <label for="">Kategori Adı</label>
+                    <select class="form-select" formControlName="categoryid">
+                        <option selected value="0">Kategori Seçiniz...</option>
+                        <option *ngFor="let item of categoryMenu" value="{{item.id}}">{{item.name}}</option>
+
+                    </select>
+                    
+                </div>
+                <p class="text-danger" ><span>{{categoryValid}}</span></p>
+            <div class="mb-3">
+
+                <label for="">Ürün Adı</label>
+                <input class="form-control" formControlName="name" >
+            </div>
+            <p class="text-danger"><span>{{nameValid}}</span></p>
+            <div class="mb-3">
+
+                <label for="">Url Linki</label>
+                <input class="form-control" formControlName="urlImage" >
+            </div>
+            <p class="text-danger"><span></span></p>
+            <button class="btn btn-primary">Ekle</button>
+        </form>
+        </div>
+    </div>
+</div>

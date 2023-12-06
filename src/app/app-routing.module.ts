@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AddcategoryComponent } from './admin/pages/category/addcategory/addcategory.component';
 import { UpdatecategoryComponent } from './admin/pages/category/updatecategory/updatecategory.component';
+import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
+import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
 
 const routes: Routes = [
 {path:"",component:LoginComponent},
@@ -22,8 +24,10 @@ const routes: Routes = [
   {path:"dashboard",component:DashboardComponent},
   {path:"category",component:CategoryComponent},
   {path:"product",component:ProductComponent},
-  {path:"addcategory",component:AddcategoryComponent},
-  {path:"updatecategory/:id",component:UpdatecategoryComponent}
+  {path:"category/addcategory",component:AddcategoryComponent},
+  {path:"category/updatecategory/:id",component:UpdatecategoryComponent},
+  {path:"product/addproduct",component:AddproductComponent},
+  {path:"product/updateproduct/:id",component:UpdateproductComponent}
   
 ]},
 

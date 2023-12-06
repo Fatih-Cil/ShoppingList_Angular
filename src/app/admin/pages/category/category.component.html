@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h2>Kategoriler</h2>
-            <a routerLink="/admin/addcategory" class="btn btn-primary">Categori Ekle</a>
+            <a routerLink="/admin/category/addcategory" class="btn btn-primary">Categori Ekle</a>
             <table class="table">
                 <thead>
                     <tr>
@@ -19,7 +19,7 @@
 
                         <td>
                             <button (click)="delete(category.id)" class="btn btn-danger" >Sil</button>
-                            <a [routerLink]="['/admin/updatecategory',category.id]" class="btn btn-warning mx-2">Güncelle</a>
+                            <a [routerLink]="['/admin/category/updatecategory',category.id]" class="btn btn-warning mx-2">Güncelle</a>
                         </td>
                     </tr>
                 </tbody>

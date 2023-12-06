@@ -34,7 +34,7 @@ export class CategoryComponent implements OnInit {
       error:(e:any)=>{
         if(e.status==404){
           alert('Hiç kategori eklenmediği için ekleme sayfasına yönlendirileceksiniz');
-        this.router.navigateByUrl('/admin/addcategory')
+        this.router.navigateByUrl('/admin/category/addcategory')
 
         }
 

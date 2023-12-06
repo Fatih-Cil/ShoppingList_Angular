@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddcategoryComponent } from './admin/pages/category/addcategory/addcategory.component';
 import { UpdatecategoryComponent } from './admin/pages/category/updatecategory/updatecategory.component';
 import { environment } from 'src/environments/environment.development';
+import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
+import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { environment } from 'src/environments/environment.development';
     LoginComponent,
     RegisterComponent,
     AddcategoryComponent,
-    UpdatecategoryComponent
+    UpdatecategoryComponent,
+    AddproductComponent,
+    UpdateproductComponent
   ],
   imports: [
     BrowserModule,
