@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row col-md-6 offset-md-3 my-5">
+      <div class="card">
+        <div class="card-header">
+            <h2>Üye Ol</h2>
+          </div>
+        <div class="card-body">
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+                <div class="mb-3">
+                    <label class="form-label">Ad</label>
+                    <input type="text" class="form-control" formControlName="name">
+                </div>
+                <p class="text-danger"><span>{{nameValid}}</span></p>
+
+                <div class="mb-3">
+                    <label class="form-label">Soyad</label>
+                    <input type="text" class="form-control" formControlName="surname">
+                </div>
+                <p class="text-danger"><span>{{surNameValid}}</span></p>
+
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" formControlName="email">
+                </div>
+                <p class="text-danger"><span>{{emailValid}}</span></p>
+
+                <div class="mb-3">
+                    <label class="form-label">Şifre</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+                <p class="text-danger"><span>{{passwordValid}}</span></p>
+                <div class="mb-3">
+                    <label class="form-label">Şifre Tekrar</label>
+                    <input type="password" class="form-control" formControlName="passwordRetry">
+                </div>
+                <p class="text-danger"><span>{{passwordRetryValid}}</span></p>
+
+
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-6 col-md-6 d-flex justify-content-start"><button class="btn btn-primary">KAYDET</button></div>
+                    <div class="col-6 col-md-6 d-flex justify-content-end">
+                        
+                    </div>
+                </div>
+                <hr />
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-2 col-md-2 d-flex justify-content-start"></div>
+                    <div class="col-10 col-md-10 d-flex justify-content-end">
+                        <p>Zaten üye misiniz?  <a routerLink="/login" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Giriş Yap</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Kategori Ekle</h2>
+            <form [formGroup]="updateCategoryForm" (ngSubmit)="updateCategory()" >
+            <div class="mb-3">
+
+                <label for="">Kategori Adı</label>
+                <input class="form-control" formControlName="name" >
+            </div>
+            <p class="text-danger"><span>{{nameValid}}</span></p>
+            <button class="btn btn-warning">Güncelle</button>
+        </form>
+        </div>
+    </div>
+</div>

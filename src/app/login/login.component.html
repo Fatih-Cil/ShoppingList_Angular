@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row col-md-6 offset-md-3 my-5">
+      <div class="card">
+        <div class="card-header">
+          <h2>Shopping List</h2>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                         </div>
+                         <p class="text-danger"><span>{{emailValid}}</span></p>
+                         <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Şifre</label>
+              <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <p><span class="text-danger">{{passwordValid}}</span></p>
+            <div><button class="btn btn-primary">Giriş</button></div>
+            
+            <hr />
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-sm-6 col-md-6 d-flex justify-content-start"></div>
+                                <div class="col-6 col-md-6 d-flex justify-content-end">
+                                    <p>Üye değil misiniz?  <a routerLink="/register" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Üye Ol</a></p>
+                                </div>
+                            </div>
+            
+          </form>
+        </div>
+    </div>
+  </div>
