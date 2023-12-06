@@ -31,18 +31,21 @@ export class LoginComponent implements OnInit{
   }
 
   ngOnInit(): void {
+
   }
 
 
   login(){
     const helper = new JwtHelperService();
 
-    this.loginService.auth(this.loginForm.value as Login) .subscribe({
+    this.loginService.auth(this.loginForm.value as Login).subscribe({
 
      next:(x)=> {
 
       const decodedToken =(helper.decodeToken(x.body as string));
-      console.log(x.headers);
+      console.log(decodedToken);
+      console.log(x.body);
+      
       
 
       this.tokenRole=(decodedToken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]);
@@ -70,6 +73,8 @@ export class LoginComponent implements OnInit{
      },
      
      complete:()=>{
+
+      
     
     if(this.tokenRole=='User'){
 

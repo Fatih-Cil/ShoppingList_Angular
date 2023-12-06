@@ -13,10 +13,11 @@ export class LoginService {
 
   auth(login: Login){
  
-    return this.http.post(`${this.baseUrl}/api/auth`,login, {observe:'response',responseType: 'text'})
+   return this.http.post(`${this.baseUrl}/api/auth`,login, {observe:'response',responseType: 'text'})
   }
     register(register:Register){
       return this.http.post<Response>(`${this.baseUrl}/api/users`,register, {observe:'response'})
     }
   
+
   }
