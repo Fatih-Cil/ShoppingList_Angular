@@ -15,6 +15,7 @@ import { UpdatecategoryComponent } from './admin/pages/category/updatecategory/u
 import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
 import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
 
+
 const routes: Routes = [
 {path:"",component:LoginComponent},
 {path:"login",component:LoginComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:"category/addcategory",component:AddcategoryComponent},
   {path:"category/updatecategory/:id",component:UpdatecategoryComponent},
   {path:"product/addproduct",component:AddproductComponent},
-  {path:"product/updateproduct/:id",component:UpdateproductComponent}
+  {path:"product/updateproduct/:id",component:UpdateproductComponent},
+  
   
 ]},
 

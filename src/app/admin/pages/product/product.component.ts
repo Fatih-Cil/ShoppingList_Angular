@@ -11,6 +11,9 @@ import { Product } from '../../models/product';
 export class ProductComponent implements OnInit {
 
 productList:Product[]=[]
+nameValid:string='';
+
+
 constructor(private productService:ProductService,private router:Router) {
   
   
@@ -33,21 +36,37 @@ constructor(private productService:ProductService,private router:Router) {
         if(e.status==404){
           alert('Hiç ürün eklenmediği için ekleme sayfasına yönlendirileceksiniz');
         this.router.navigateByUrl('/admin/product/addproduct')
+        }
+      },
+      complete:()=>{
+     
+      }
+      
+    })
+     
+  }
 
+  delete(id:number){
+    this.productService.delete(id).subscribe({
+      next:(x)=>{ console.log(x.body);
+        console.log(x.headers);
+        
+      },
+      error:(e:any)=>{
+        if(e.status==500){
+          alert('Sunucuya erişilemiyor');
+        }
+        if(e.status==404) { 
+          alert('Ürün bulunamadı');
         }
 
       },
       complete:()=>{
-        
-       
+        alert('Ürün silindi');
+        this.load();
       }
-      
-
 
     })
-      
-      
-      
   }
     
 

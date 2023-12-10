@@ -57,19 +57,13 @@ export class CategoryComponent implements OnInit {
       next:(x)=>{ console.log(x.body);
         console.log(x.headers);
         
-      
-
       },
       error:(e:any)=>{
         if(e.status==400){
           console.log(e);
-          
-          this.nameValid = e.error.errors.Name != null ? e.error.errors.Name[0] : '';
-
+                    this.nameValid = e.error.errors.Name != null ? e.error.errors.Name[0] : '';
         }
         if(e.status==404) { 
-          
-        
           alert('Kategoriye ait ürün olduğu için silme işlemi yapılamadı');
         }
 

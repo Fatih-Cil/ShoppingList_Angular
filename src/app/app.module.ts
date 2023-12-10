@@ -20,6 +20,7 @@ import { environment } from 'src/environments/environment.development';
 import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
 import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { UpdateproductComponent } from './admin/pages/product/updateproduct/upda
     AddcategoryComponent,
     UpdatecategoryComponent,
     AddproductComponent,
-    UpdateproductComponent
+    UpdateproductComponent,
+   
   ],
   imports: [
     BrowserModule,

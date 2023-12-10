@@ -22,6 +22,13 @@ export class ProductService {
       return this.http.get<Product[]>(`${this.baseUrl}/api/products`);
     }
  
+    delete(id:number){
+      return this.http.delete<Response>(`${this.baseUrl}/api/products/${id}`,{observe:'response'})
+    } 
+  
+    update(product:Product){
+      return this.http.put<Response>(`${this.baseUrl}/api/products/${product.id}`,product,{observe:'response'})
+    }
 
 
 }

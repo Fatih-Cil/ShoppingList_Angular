@@ -22,7 +22,7 @@
                         <td>{{product.categoryName}}</td>
 
                         <td>
-                            <button  class="btn btn-danger" >Sil</button>
+                            <button  class="btn btn-danger" (click)="delete(product.id)">Sil</button>
                             <a  class="btn btn-warning mx-2">Güncelle</a>
                         </td>
                     </tr>
