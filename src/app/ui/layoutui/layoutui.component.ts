@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-layoutui',
@@ -6,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./layoutui.component.css']
 })
 export class LayoutuiComponent {
+
+  /**
+   *
+   */
+  constructor(private loginService:LoginService,private router:Router) {
+    
+    
+  }
+
+  exit(){
+this.loginService.logout();
+this.router.navigateByUrl('/login')
+  }
 
 }

@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit{
   passwordValid:string='';
   errorValid:string|undefined;
 
-
+  private readonly TOKEN_KEY = 'authToken';
   tokenRole:string='';
   
 
@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit{
   }
 
   ngOnInit(): void {
+
 
   }
 
@@ -42,14 +43,13 @@ export class LoginComponent implements OnInit{
 
      next:(x)=> {
 
-      const decodedToken =(helper.decodeToken(x.body as string));
+     const decodedToken =(helper.decodeToken(x.body as string));
       console.log(decodedToken);
       console.log(x.body);
-      
-      
+      sessionStorage.setItem(this.TOKEN_KEY, x.body as string);
 
-      this.tokenRole=(decodedToken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]);
-       
+     this.tokenRole= this.loginService.getTokenRole();
+      
     },
      error:(e:any)=>{
       if(e.status==404)

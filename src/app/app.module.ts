@@ -19,6 +19,7 @@ import { UpdatecategoryComponent } from './admin/pages/category/updatecategory/u
 import { environment } from 'src/environments/environment.development';
 import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
 import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
+import { AddlistComponent } from './ui/pages/addlist/addlist.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { UpdateproductComponent } from './admin/pages/product/updateproduct/upda
     UpdatecategoryComponent,
     AddproductComponent,
     UpdateproductComponent,
+    AddlistComponent,
    
   ],
   imports: [

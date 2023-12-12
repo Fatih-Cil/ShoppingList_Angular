@@ -1,1 +1,35 @@
-<p>lists works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Listelerim</h2>
+            <a routerLink="/ui/lists/addlist" class="btn btn-primary">Liste Ekle</a>
+           
+           
+            
+                <div class="row my-2">
+          
+                <div class="col-md-3" *ngFor="let item of list">
+                    
+                    <div class="card text-bg-info  mb-3" style="max-width: 18rem;">
+                        
+                        <div class="card-header text-center">
+                            {{item.name}}
+                          </div><div class="card-body">
+                            <div class="container text-center">
+                                <div class="row align-items-center">
+                                    
+                                    <div class="col-12">
+                                        <h5 class="card-title text-center">ÜRÜN</h5>
+                                        <p class="card-text"><h2></h2>
+                                    </div>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+        </div>
+        </div>
+   

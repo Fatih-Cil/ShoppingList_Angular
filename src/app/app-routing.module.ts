@@ -14,6 +14,7 @@ import { AddcategoryComponent } from './admin/pages/category/addcategory/addcate
 import { UpdatecategoryComponent } from './admin/pages/category/updatecategory/updatecategory.component';
 import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
 import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
+import { AddlistComponent } from './ui/pages/addlist/addlist.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
 
 {path:"ui",component:LayoutuiComponent,children:[
   {path:"",component:ListsComponent},
-  {path:"lists",component:ListsComponent}
+  {path:"lists",component:ListsComponent},
+  {path:"lists/addlist",component:AddlistComponent},
 ]}
 
 ];
