@@ -23,7 +23,7 @@ export class UpdateshoppinglistComponent implements OnInit {
   });
   
   
-  constructor(private productListService:ProductlistService,private viewbag:ViewbagService,private location: Location) {
+  constructor(private productListService:ProductlistService,private router:Router,private viewbag:ViewbagService) {
   
     
   }
@@ -50,15 +50,15 @@ export class UpdateshoppinglistComponent implements OnInit {
 
     this.updateListForm.get('description')?.setValue(this.currentDataString$);
     this.updateListForm.get('id')?.setValue(this.currentDataId$);
-    
+    this.updateListForm.get('listId')?.setValue(this.currentDataListId$);
    
       
     
   }
-  returnPage():void{
+  returnPage(){
 
     
-    this.location.back()
+    this.router.navigateByUrl('/ui/lists/addproducttolist')
   }
 
 
