@@ -53,6 +53,11 @@ export class CategoryComponent implements OnInit {
   }
 
   delete(id:number){
+    const isConfirmed = window.confirm('Silmek istediğinize emin misiniz?');
+    // Kullanıcı "Evet" derse işlemi devam ettir
+  if (isConfirmed) {
+
+
     this.categoryService.delete(id).subscribe({
       next:(x)=>{ console.log(x.body);
         console.log(x.headers);
@@ -75,5 +80,6 @@ export class CategoryComponent implements OnInit {
 
     })
   }
+}
 
 }

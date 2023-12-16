@@ -15,6 +15,8 @@ import { UpdatecategoryComponent } from './admin/pages/category/updatecategory/u
 import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
 import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
 import { AddlistComponent } from './ui/pages/addlist/addlist.component';
+import { AddproducttolistComponent } from './ui/pages/addproducttolist/addproducttolist.component';
+import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updateshoppinglist.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,8 @@ const routes: Routes = [
   {path:"",component:ListsComponent},
   {path:"lists",component:ListsComponent},
   {path:"lists/addlist",component:AddlistComponent},
+  {path:"lists/addproducttolist",component:AddproducttolistComponent},
+  {path:"lists/updateshoppinglist",component:UpdateshoppinglistComponent},
 ]}
 
 ];

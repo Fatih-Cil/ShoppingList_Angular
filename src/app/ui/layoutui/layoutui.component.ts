@@ -18,8 +18,14 @@ export class LayoutuiComponent {
   }
 
   exit(){
+
+    const isConfirmed = window.confirm('Çıkmak istediğinize emin misiniz?');
+
+  // Kullanıcı "Evet" derse işlemi devam ettir
+  if (isConfirmed) {
 this.loginService.logout();
 this.router.navigateByUrl('/login')
   }
+}
 
 }

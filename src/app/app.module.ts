@@ -12,7 +12,7 @@ import { ProductComponent } from './admin/pages/product/product.component';
 import { ListsComponent } from './ui/pages/lists/lists.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddcategoryComponent } from './admin/pages/category/addcategory/addcategory.component';
 import { UpdatecategoryComponent } from './admin/pages/category/updatecategory/updatecategory.component';
@@ -20,6 +20,8 @@ import { environment } from 'src/environments/environment.development';
 import { AddproductComponent } from './admin/pages/product/addproduct/addproduct.component';
 import { UpdateproductComponent } from './admin/pages/product/updateproduct/updateproduct.component';
 import { AddlistComponent } from './ui/pages/addlist/addlist.component';
+import { AddproducttolistComponent } from './ui/pages/addproducttolist/addproducttolist.component';
+import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updateshoppinglist.component';
 
 
 @NgModule({
@@ -38,13 +40,16 @@ import { AddlistComponent } from './ui/pages/addlist/addlist.component';
     AddproductComponent,
     UpdateproductComponent,
     AddlistComponent,
+    AddproducttolistComponent,
+    UpdateshoppinglistComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [{provide:'BASE_API_URL',useValue:environment.baseUrl}],
   bootstrap: [AppComponent]
