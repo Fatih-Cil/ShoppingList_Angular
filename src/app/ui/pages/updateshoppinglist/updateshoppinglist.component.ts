@@ -19,11 +19,11 @@ export class UpdateshoppinglistComponent implements OnInit {
   updateListForm=new FormGroup({
     description:new FormControl(''),
     id:new FormControl(0),
-    
+    listId:new FormControl(0),
   });
   
   
-  constructor(private productListService:ProductlistService,private router:Router,private viewbag:ViewbagService) {
+  constructor(private productListService:ProductlistService,private viewbag:ViewbagService,private location: Location) {
   
     
   }
@@ -55,10 +55,10 @@ export class UpdateshoppinglistComponent implements OnInit {
       
     
   }
-  returnPage(){
+  returnPage():void{
 
     
-    this.router.navigateByUrl('/ui/lists/addproducttolist')
+    this.location.back()
   }
 
 

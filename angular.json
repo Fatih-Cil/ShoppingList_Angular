@@ -27,7 +27,7 @@
             "styles": [
               "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ShoppingList_Angular:build:production"
+              "buildTarget": "ShoppingList_Angular:build:production"
             },
             "development": {
-              "browserTarget": "ShoppingList_Angular:build:development"
+              "buildTarget": "ShoppingList_Angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ShoppingList_Angular:build"
+            "buildTarget": "ShoppingList_Angular:build"
           }
         },
         "test": {
