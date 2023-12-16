@@ -17,8 +17,7 @@ export class ProductlistService {
   private dataIdSource = new BehaviorSubject<number>(0);
   currentDataId = this.dataIdSource.asObservable();
 
-  private dataListIdSource = new BehaviorSubject<number>(0);
-  currentDataListId = this.dataListIdSource.asObservable();
+  
 
   constructor(private http:HttpClient,@Inject('BASE_API_URL') private baseUrl:string) { }
 

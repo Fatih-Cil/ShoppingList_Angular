@@ -14,7 +14,7 @@ export class UpdateshoppinglistComponent implements OnInit {
 
   currentDataString$: string='';
   currentDataId$: number=0;
-  currentDataListId$: number=0;
+  
 
   updateListForm=new FormGroup({
     description:new FormControl(''),
@@ -44,13 +44,11 @@ export class UpdateshoppinglistComponent implements OnInit {
     this.productListService.currentDataId.subscribe((dataId) => {
       this.currentDataId$ = dataId;
     });
-    this.productListService.currentDataListId.subscribe((dataListId) => {
-      this.currentDataListId$ = dataListId;
-    });
+   
 
     this.updateListForm.get('description')?.setValue(this.currentDataString$);
     this.updateListForm.get('id')?.setValue(this.currentDataId$);
-    this.updateListForm.get('listId')?.setValue(this.currentDataListId$);
+    
    
       
     
