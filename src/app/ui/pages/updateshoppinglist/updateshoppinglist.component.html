@@ -1,34 +1,48 @@
- 
- {{currentDataId$}}-{{currentDataString$}}
- 
+{{currentDataId$}}-{{currentDataString$}}
+
 
 
 <div class="container">
     <div class="row">
         <div class="col-md-4 offset-md-4">
             <h2>Açıklama Ekle</h2>
-            <form [formGroup]="updateListForm">
-                <div class="modal-body">
-            
-                    <div class="mb-3">
-            
-                        <label for="">Açıklama</label>
-                        <input class="form-control" formControlName="description" />
+            <form [formGroup]="updateListForm" (ngSubmit)="updateDescription()">
+                <div class="card">
+
+
+
+                    <div class="card-header">
+                        <h2>Açıklama Ekle</h2>
                     </div>
-                    <div class="mb-3">
-            
-                       <label for="">id</label>
-                       <input class="form-control" formControlName="id" />
-                   </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+
+                            <label for="">Açıklama</label>
+                            <input class="form-control" formControlName="description" />
+                        </div>
+                        <p class="text-danger"><span>{{descriptionValid}}</span></p>
+                        <div class="mb-3">
+
+                            <label for="">id</label>
+                            <input class="form-control" formControlName="id" />
+                        </div>
+                        <div class="mb-3"><div class="row">
+                           <div class="col-md-8 text-left"><button type="button" class="btn btn-secondary" (click)="returnPage()">Vazgeç</button></div> 
+                           <div class="col-md-3 text-right"><button class="btn btn-warning">Güncelle</button></div> 
+                        </div></div>
+                        
+                        
+                    
+                    </div>
+
+                    
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
-                <div class="modal-footer justify-content-between">
-                   <div><button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal" (click)="returnPage()">Vazgeç</button></div> 
-                    <div><button type="submit" class="btn btn-warning">Güncelle</button></div>
-                </div>
+
+
+
+
             </form>
         </div>
     </div>
 </div>
- 
-

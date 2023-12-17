@@ -38,7 +38,7 @@ export class ProductlistService {
 
   update(updateproductlist:Updateproductlist){
 
-    return this.http.put(`${this.baseUrl}/api/productlists/${updateproductlist.id}`,updateproductlist);
+    return this.http.put<Response>(`${this.baseUrl}/api/productlists/${updateproductlist.id}`,updateproductlist);
 
   }
 

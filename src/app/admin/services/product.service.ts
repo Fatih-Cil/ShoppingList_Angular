@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { AddProduct } from '../models/add-product';
 import { Product } from '../models/product';
+import { filter, from, map, mergeMap, toArray } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,14 @@ export class ProductService {
   
     update(product:Product){
       return this.http.put<Response>(`${this.baseUrl}/api/products/${product.id}`,product,{observe:'response'})
+    }
+
+    getUserWithSearch(searchText:string){
+
+      
+      
+      return this.http.get<Product[]>(`${this.baseUrl}/api/products`)
+      .pipe(mergeMap(x=>from(x)),filter(x=>x.name.toLowerCase().includes(searchText.toLowerCase())),toArray());
     }
 
 

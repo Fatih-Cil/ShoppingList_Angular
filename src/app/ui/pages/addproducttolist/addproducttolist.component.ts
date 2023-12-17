@@ -8,6 +8,7 @@ import { ProductlistService } from '../../services/productlist.service';
 import { Addproducttolist } from '../../models/addproducttolist';
 import { Productlist } from '../../models/productlist';
 import { FormControl, FormGroup } from '@angular/forms';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-addproducttolist',
@@ -21,8 +22,8 @@ export class AddproducttolistComponent implements OnInit {
   listId:number=0;
   addProductList:any|undefined;
   myShoppingList:Productlist[]=[];
-
-
+ 
+  search=new FormControl('');
   
 
   constructor(
@@ -49,6 +50,16 @@ export class AddproducttolistComponent implements OnInit {
     status:true
     }
     
+    this.search.valueChanges.subscribe(x=>{
+
+     
+
+      this.productService.getUserWithSearch(x as string).subscribe(y=>{
+        this.productList=y;
+        
+      })
+      
+    })
     
     
   }
@@ -99,10 +110,13 @@ export class AddproducttolistComponent implements OnInit {
   }
 
   add(id:number){
-    
+   
+    let istrue=this.myShoppingList.some(item=>item.productId==id)
     
 
-    this.addProductList.productId=id;
+    if (!istrue){
+      
+      this.addProductList.productId=id;
     this.addProductList.listId=this.viewbag.sharedData;
     this.addProductList.status=true;
     this.productListService.add(this.addProductList).subscribe({
@@ -114,19 +128,23 @@ export class AddproducttolistComponent implements OnInit {
         this.loadShoppingList();
       }
       
-      
-        
       });
-    
+    }
+    else{
+      alert("Bu ürün listenizde var")
 
-  }
+    }
+    
+   }
+       
+   
+  
 
   delete(id:number){
     this.productListService.delete(id).subscribe({
       next:(x)=>{ 
-        
 
-      },
+        },
       error:(e:any)=>{
         if(e.status==404){
           
@@ -152,7 +170,6 @@ this.router.navigateByUrl('/ui/lists/updateshoppinglist')
 
   }
 
-
-  
+ 
 
 }

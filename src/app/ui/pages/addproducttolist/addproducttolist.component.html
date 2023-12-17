@@ -7,6 +7,10 @@
             <div class="card">
                 <div class="card-header">
                     <h2>Ürün Seç</h2>
+                    
+                    <input class="form-control" type="text" placeholder="Ürün Ara" [formControl]="search">
+                   
+                    
                 </div>
                 <div class="card-body">
                     <table class="table">
@@ -42,7 +46,7 @@
         <div class="col-7">
             <div class="card">
                 <div class="card-header">
-                    <h2>Alışveriş Listen</h2>
+                    <h2>Alışveriş Listen</h2><button class="btn btn-primary" >Alışverişe Çık</button>
                 </div>
                 <div class="card-body">
                     <table class="table">
