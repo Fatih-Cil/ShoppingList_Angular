@@ -25,10 +25,9 @@
                                         <h2></h2>
                                     </div>
 
-                                    <div *ngIf="item.status"><button class="btn btn-success my-2" (click)="selectProduct(item.id)">Ürün
-                                            Seç</button></div>
-                                    <div *ngIf="!item.status"><button class="btn btn-warning my-2" >Alışverişi
-                                            Tamamla</button></div>
+                                    <div *ngIf="item.status"><button class="btn btn-success my-2" (click)="selectProduct(item.id)">Listeye Ürün
+                                            Ekle</button></div>
+                                    <div *ngIf="!item.status"><button class="btn btn-warning my-2" (click)="viewList(item.id)">Listeyi Göster</button></div>
                                     <div><button class="btn btn-danger" (click)="delete(item.id)">Sil</button></div>
 
                                 </div>
@@ -41,3 +40,4 @@
         </div>
     </div>
 </div>
+

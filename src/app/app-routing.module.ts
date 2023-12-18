@@ -19,6 +19,8 @@ import { AddproducttolistComponent } from './ui/pages/addproducttolist/addproduc
 import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updateshoppinglist.component';
 
 
+
+
 const routes: Routes = [
 {path:"",component:LoginComponent},
 {path:"login",component:LoginComponent},
@@ -42,6 +44,8 @@ const routes: Routes = [
   {path:"lists/addlist",component:AddlistComponent},
   {path:"lists/addproducttolist",component:AddproducttolistComponent},
   {path:"lists/updateshoppinglist",component:UpdateshoppinglistComponent},
+  
+  
 ]}
 
 ];

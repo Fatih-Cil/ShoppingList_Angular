@@ -46,16 +46,18 @@
         <div class="col-7">
             <div class="card">
                 <div class="card-header">
-                    <h2>Alışveriş Listen</h2><button class="btn btn-primary" >Alışverişe Çık</button>
+                    <h2>Alışveriş Listen</h2>
+                    <button class="btn btn-primary" (click)="shoppingGo(listId)" >Alışverişe Çık</button>
+                    
                 </div>
-                <div class="card-body">
+                <div class="card-body" >
                     <table class="table">
                         <thead>
                             <tr>
 
                                 <th>Görsel</th>
                                 <th>Ürün</th>
-                                <th>Açıklama(Adet/Kg/lt vs.)</th>
+                                <th>Adet/Kg/lt vs.</th>
                                 <th>İşlemler</th>
                             </tr>
                         </thead>

@@ -24,6 +24,9 @@ import { AddproducttolistComponent } from './ui/pages/addproducttolist/addproduc
 import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updateshoppinglist.component';
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +45,8 @@ import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updat
     AddlistComponent,
     AddproducttolistComponent,
     UpdateshoppinglistComponent,
+    
+    
    
   ],
   imports: [
@@ -49,7 +54,9 @@ import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updat
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
+    
   ],
   providers: [{provide:'BASE_API_URL',useValue:environment.baseUrl}],
   bootstrap: [AppComponent]
