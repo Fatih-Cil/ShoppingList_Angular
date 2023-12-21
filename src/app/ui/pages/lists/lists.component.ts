@@ -102,7 +102,7 @@ this.router.navigateByUrl('/ui/lists/addproducttolist')
   viewList(id:number){
     
     this.viewbag.sharedData=id;
-    this.router.navigateByUrl('/ui/lists/myshoppinglist')
+    this.router.navigateByUrl('/ui/lists/mylistview')
 
   }
 

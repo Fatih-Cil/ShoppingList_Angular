@@ -32,6 +32,12 @@ export class ProductlistService {
     return this.http.get<Productlist[]>(`${this.baseUrl}/api/ProductLists/ProductListDetail/${id}`);
   }
 
+  getByListId(id:number){
+
+    return this.http.get<Productlist[]>(`${this.baseUrl}/api/ProductLists?listid=${id}`);
+
+  }
+
   delete(id:number){
     return this.http.delete<Response>(`${this.baseUrl}/api/ProductLists/${id}`,{observe:'response'})
   } 

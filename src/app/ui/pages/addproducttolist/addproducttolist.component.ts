@@ -193,7 +193,7 @@ export class AddproducttolistComponent implements OnInit {
         console.log("Değişen değer:" + updatedList.id + "-" + updatedList.userId + "-" + updatedList.name + "-" + updatedList.status);
 
         this.listService.updateListStatus(updatedList).subscribe({
-          next: (y) => { this.router.navigateByUrl('/ui/lists/myshoppinglist') },
+          next: (y) => { this.router.navigateByUrl('/ui/lists/mylistview') },
           error: (e: any) => {
             console.log(e);
           },

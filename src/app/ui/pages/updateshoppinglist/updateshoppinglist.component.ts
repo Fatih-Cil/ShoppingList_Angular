@@ -20,6 +20,7 @@ export class UpdateshoppinglistComponent implements OnInit {
   updateListForm=new FormGroup({
     description:new FormControl(''),
     id:new FormControl(0),
+    status:new FormControl(true)
     
   });
   descriptionValid:string='';
@@ -52,6 +53,8 @@ export class UpdateshoppinglistComponent implements OnInit {
     this.updateListForm.get('id')?.setValue(this.currentDataId$);
     
   }
+
+
   returnPage(){
 
     

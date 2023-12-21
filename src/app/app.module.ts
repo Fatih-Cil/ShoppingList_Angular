@@ -22,6 +22,7 @@ import { UpdateproductComponent } from './admin/pages/product/updateproduct/upda
 import { AddlistComponent } from './ui/pages/addlist/addlist.component';
 import { AddproducttolistComponent } from './ui/pages/addproducttolist/addproducttolist.component';
 import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updateshoppinglist.component';
+import { MylistviewComponent } from './ui/pages/mylistview/mylistview.component';
 
 
 
@@ -45,7 +46,7 @@ import { UpdateshoppinglistComponent } from './ui/pages/updateshoppinglist/updat
     AddlistComponent,
     AddproducttolistComponent,
     UpdateshoppinglistComponent,
-    
+    MylistviewComponent,
     
    
   ],
